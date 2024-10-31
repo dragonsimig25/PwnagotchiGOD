@@ -1,0 +1,811 @@
+main.name = "dragon"
+main.lang = "en"
+main.confd = "/etc/pwnagotchi/conf.d/"
+main.custom_plugins = "/var/tmp/pwnagotchi/plugins"
+main.custom_plugin_repos = [ "https://github.com/evilsocket/pwnagotchi-plugins-contrib/archive/master.zip",]
+main.iface = "mon0"
+main.mon_start_cmd = "/usr/bin/monstart"
+main.mon_stop_cmd = "/usr/bin/monstop"
+main.mon_max_blind_epochs = 50
+main.no_restart = false
+main.whitelist = [
+ "",
+ "ANOTHER_EXAMPLE_NETWORK",
+ "fo:od:ba:be:fo:od",
+ "fo:od:ba",
+]
+main.filter = ""
+main.plugins.grid.enabled = true
+main.plugins.grid.report = false
+main.plugins.grid.exclude = [ "YourHomeNetworkHere",]
+
+main.plugins.auto-update.enabled = true
+main.plugins.auto-update.install = true
+main.plugins.auto-update.interval = 1
+
+main.plugins.net-pos.enabled = false
+main.plugins.net-pos.api_key = "test"
+
+main.plugins.gps.enabled = false
+main.plugins.gps.speed = 19200
+main.plugins.gps.device = "/dev/ttyUSB0"
+
+main.plugins.webgpsmap.enabled = false
+
+main.plugins.onlinehashcrack.enabled = false
+main.plugins.onlinehashcrack.email = ""
+main.plugins.onlinehashcrack.dashboard = ""
+main.plugins.onlinehashcrack.single_files = false
+main.plugins.onlinehashcrack.whitelist = []
+
+main.plugins.wpa-sec.enabled = false
+main.plugins.wpa-sec.api_key = ""
+main.plugins.wpa-sec.api_url = "https://wpa-sec.stanev.org"
+main.plugins.wpa-sec.download_results = false
+main.plugins.wpa-sec.whitelist = []
+
+main.plugins.wigle.enabled = false
+main.plugins.wigle.api_key = ""
+main.plugins.wigle.whitelist = []
+main.plugins.wigle.donate = true
+
+main.plugins.bt-tether.enabled = true
+main.plugins.bt-tether.devices.android-phone.enabled = true
+main.plugins.bt-tether.devices.android-phone.search_order = 1
+main.plugins.bt-tether.devices.android-phone.mac = "E8:88:43:42:D9:49"
+main.plugins.bt-tether.devices.android-phone.ip = "192.168.44.44"
+main.plugins.bt-tether.devices.android-phone.netmask = 24
+main.plugins.bt-tether.devices.android-phone.interval = 1
+main.plugins.bt-tether.devices.android-phone.scantime = 10
+main.plugins.bt-tether.devices.android-phone.max_tries = 10
+main.plugins.bt-tether.devices.android-phone.share_internet = true
+main.plugins.bt-tether.devices.android-phone.priority = 1
+
+main.plugins.bt-tether.devices.ios-phone.enabled = false
+main.plugins.bt-tether.devices.ios-phone.search_order = 2
+main.plugins.bt-tether.devices.ios-phone.mac = ""
+main.plugins.bt-tether.devices.ios-phone.ip = "172.20.10.6"
+main.plugins.bt-tether.devices.ios-phone.netmask = 24
+main.plugins.bt-tether.devices.ios-phone.interval = 5
+main.plugins.bt-tether.devices.ios-phone.scantime = 20
+main.plugins.bt-tether.devices.ios-phone.max_tries = 0
+main.plugins.bt-tether.devices.ios-phone.share_internet = false
+main.plugins.bt-tether.devices.ios-phone.priority = 999
+
+main.plugins.memtemp.enabled = false
+main.plugins.memtemp.scale = "celsius"
+main.plugins.memtemp.orientation = "horizontal"
+main.plugins.memtemp.linespacing = 18
+main.plugins.memtemp.position = "382,194"
+
+main.plugins.paw-gps.enabled = false
+main.plugins.paw-gps.ip = ""
+
+main.plugins.gpio_buttons.enabled = false
+
+main.plugins.led.enabled = true
+main.plugins.led.led = 0
+main.plugins.led.delay = 200
+main.plugins.led.patterns.loaded = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.updating = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.unread_inbox = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.ready = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.ai_ready = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.ai_training_start = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.ai_best_reward = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.ai_worst_reward = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.bored = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.sad = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.excited = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.lonely = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.rebooting = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.wait = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.sleep = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.wifi_update = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.association = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.deauthentication = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.handshake = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.epoch = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.peer_detected = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led.patterns.peer_lost = "oo  oo  oo oo  oo  oo  oo"
+
+main.plugins.logtail.enabled = true
+main.plugins.logtail.max-lines = 10000
+
+main.plugins.IPDisplay.enabled = false
+main.plugins.IPDisplay.skip_devices = [ "lo",]
+
+main.plugins.watchdog.enabled = false
+
+main.plugins.achievements.enabled = true
+
+main.plugins.age.enabled = false
+main.plugins.age.age_x_coord = 0
+main.plugins.age.age_y_coord = 56
+main.plugins.age.str_x_coord = 125
+main.plugins.age.str_y_coord = 56
+
+main.plugins.agev2.enabled = false
+main.plugins.agev2.age_x_coord = 0
+main.plugins.agev2.age_y_coord = 56
+main.plugins.agev2.str_x_coord = 125
+main.plugins.agev2.str_y_coord = 56
+
+main.plugins.aircrackonly.enabled = true
+main.plugins.aircrackonly.face = "(>.<)"
+
+main.plugins.basicliht.enabled = false
+
+main.plugins.apprise-notify.enabled = false
+
+main.plugins.auto-hotspot.enabled = false
+
+main.plugins.auto_backup.commands = [
+ "tar czf /tmp/pwnagotchi-backup.tar.gz {files}",
+ "mv /tmp/backup.tar.gz /home/pi/pwnagotchi_backup-$(date +%d-%m-%Y).tar.gz",
+ "mv /tmp/backup.tar.gz /root/pwnagotchi_backup-$(date +%d-%m-%Y).tar.gz",
+]
+main.plugins.auto_backup.enabled = false
+main.plugins.auto_backup.files = [
+ "/root/brain.nn",
+ "/root/brain.json",
+ "/root/.api-report.json",
+ "/root/handshakes/",
+ "/root/peers/",
+ "/etc/pwnagotchi/",
+ "/var/log/pwnagotchi.log",
+ "/var/log/pwngrid-peer.log",
+]
+main.plugins.auto_backup.interval = 1
+main.plugins.auto_backup.max_tries = 10
+
+main.plugins.away_base.enabled = false
+
+main.plugins.banthex.api_key = "bb8d067f703da80ad39eb2fcc38fa2b7"
+main.plugins.banthex.api_url = "https://banthex.de/wpa/"
+main.plugins.banthex.download_results = true
+main.plugins.banthex.enabled = false
+main.plugins.banthex.whitelist = [
+ "B33zH1v3!",
+ "Downtown-Personeel-2.4G",
+ "Downtown-Personeel-5G",
+ "Downtown-Gasten",
+ "2C:3A:FD:42:88:60",
+ "2C:3A:FD:42:88:61",
+ "BC:05:43:13:6F:82",
+ "DownTown Internet",
+]
+
+main.plugins.apfaker.enabled = false
+
+main.plugins.beaconify.enabled = false
+
+main.plugins.beacons.enabled = false
+
+main.plugins.better_apfaker.enabled = true
+main.plugins.better_apfaker.ssids = [
+ "5G TEST CELL TOWER 2",
+ "5G TEST CELL TOWER",
+]
+main.plugins.better_apfaker.max = 50
+main.plugins.better_apfaker.password_protected = false
+main.plugins.better_apfaker.path = "/home/pi/apfaker/"
+
+main.plugins.better_onlinehashcrack.dashboard = ""
+main.plugins.better_onlinehashcrack.email = "bauke.molenaar@gmail.com"
+main.plugins.better_onlinehashcrack.enabled = false
+main.plugins.better_onlinehashcrack.single_files = true
+main.plugins.better_onlinehashcrack.whitelist = [
+ "B33zH1v3!",
+ "Downtown-Personeel-2.4G",
+ "Downtown-Personeel-5G",
+ "Downtown-Gasten",
+ "2C:3A:FD:42:88:60",
+ "2C:3A:FD:42:88:61",
+ "BC:05:43:13:6F:82",
+ "DownTown Internet",
+]
+
+main.plugins.better_quickdic.enabled = false
+main.plugins.better_quickdic.face = "(·ω·)"
+main.plugins.better_quickdic.wordlist_folder = "/etc/pwnagotchi/wordlists/passwords"
+
+main.plugins.birthday.enabled = false
+
+main.plugins.bitcoin.api_url = "https://coindesk.com"
+main.plugins.bitcoin.bitcoin_api_url = "/https://api.coindesk.com/v1/bpi/currentprice.json/"
+main.plugins.bitcoin.enabled = false
+
+main.plugins.blemon_plugin.enabled = false
+main.plugins.blemon_plugin.face = "(B+B)"
+
+main.plugins.bluetoothsniffer.enabled = false
+
+main.plugins.bshim.enabled = true
+main.plugins.bshim.buttons.A.command = ""
+main.plugins.bshim.buttons.A.blink.blink_times = 0
+main.plugins.bshim.buttons.A.blink.blue = 0
+main.plugins.bshim.buttons.A.blink.enabled = false
+main.plugins.bshim.buttons.A.blink.green = 0
+main.plugins.bshim.buttons.A.blink.off_time = 0
+main.plugins.bshim.buttons.A.blink.on_time = 0
+main.plugins.bshim.buttons.A.blink.red = 0
+
+main.plugins.bshim.buttons.B.command = ""
+main.plugins.bshim.buttons.B.blink.blink_times = 0
+main.plugins.bshim.buttons.B.blink.blue = 0
+main.plugins.bshim.buttons.B.blink.enabled = false
+main.plugins.bshim.buttons.B.blink.green = 0
+main.plugins.bshim.buttons.B.blink.off_time = 0
+main.plugins.bshim.buttons.B.blink.on_time = 0
+main.plugins.bshim.buttons.B.blink.red = 0
+
+main.plugins.bshim.buttons.C.command = ""
+main.plugins.bshim.buttons.C.blink.blink_times = 0
+main.plugins.bshim.buttons.C.blink.blue = 0
+main.plugins.bshim.buttons.C.blink.enabled = false
+main.plugins.bshim.buttons.C.blink.green = 0
+main.plugins.bshim.buttons.C.blink.off_time = 0
+main.plugins.bshim.buttons.C.blink.on_time = 0
+main.plugins.bshim.buttons.C.blink.red = 0
+
+main.plugins.bshim.buttons.D.command = ""
+main.plugins.bshim.buttons.D.blink.blink_times = 0
+main.plugins.bshim.buttons.D.blink.blue = 0
+main.plugins.bshim.buttons.D.blink.enabled = false
+main.plugins.bshim.buttons.D.blink.green = 0
+main.plugins.bshim.buttons.D.blink.off_time = 0
+main.plugins.bshim.buttons.D.blink.on_time = 0
+main.plugins.bshim.buttons.D.blink.red = 0
+
+main.plugins.bshim.buttons.E.command = ""
+main.plugins.bshim.buttons.E.blink.blink_times = 0
+main.plugins.bshim.buttons.E.blink.blue = 0
+main.plugins.bshim.buttons.E.blink.enabled = false
+main.plugins.bshim.buttons.E.blink.green = 0
+main.plugins.bshim.buttons.E.blink.off_time = 0
+main.plugins.bshim.buttons.E.blink.on_time = 0
+main.plugins.bshim.buttons.E.blink.red = 0
+
+main.plugins.buttonshim.enabled = false
+main.plugins.buttonshim.buttons.A.command = ""
+main.plugins.buttonshim.buttons.A.blink.blink_times = 0
+main.plugins.buttonshim.buttons.A.blink.blue = 0
+main.plugins.buttonshim.buttons.A.blink.enabled = false
+main.plugins.buttonshim.buttons.A.blink.green = 0
+main.plugins.buttonshim.buttons.A.blink.off_time = 0
+main.plugins.buttonshim.buttons.A.blink.on_time = 0
+main.plugins.buttonshim.buttons.A.blink.red = 0
+
+main.plugins.buttonshim.buttons.B.command = ""
+main.plugins.buttonshim.buttons.B.blink.blink_times = 0
+main.plugins.buttonshim.buttons.B.blink.blue = 0
+main.plugins.buttonshim.buttons.B.blink.enabled = false
+main.plugins.buttonshim.buttons.B.blink.green = 0
+main.plugins.buttonshim.buttons.B.blink.off_time = 0
+main.plugins.buttonshim.buttons.B.blink.on_time = 0
+main.plugins.buttonshim.buttons.B.blink.red = 0
+
+main.plugins.buttonshim.buttons.C.command = ""
+main.plugins.buttonshim.buttons.C.blink.blink_times = 0
+main.plugins.buttonshim.buttons.C.blink.blue = 0
+main.plugins.buttonshim.buttons.C.blink.enabled = false
+main.plugins.buttonshim.buttons.C.blink.green = 0
+main.plugins.buttonshim.buttons.C.blink.off_time = 0
+main.plugins.buttonshim.buttons.C.blink.on_time = 0
+main.plugins.buttonshim.buttons.C.blink.red = 0
+
+main.plugins.buttonshim.buttons.D.command = ""
+main.plugins.buttonshim.buttons.D.blink.blink_times = 0
+main.plugins.buttonshim.buttons.D.blink.blue = 0
+main.plugins.buttonshim.buttons.D.blink.enabled = false
+main.plugins.buttonshim.buttons.D.blink.green = 0
+main.plugins.buttonshim.buttons.D.blink.off_time = 0
+main.plugins.buttonshim.buttons.D.blink.on_time = 0
+main.plugins.buttonshim.buttons.D.blink.red = 0
+
+main.plugins.buttonshim.buttons.E.command = ""
+main.plugins.buttonshim.buttons.E.blink.blink_times = 0
+main.plugins.buttonshim.buttons.E.blink.blue = 0
+main.plugins.buttonshim.buttons.E.blink.enabled = false
+main.plugins.buttonshim.buttons.E.blink.green = 0
+main.plugins.buttonshim.buttons.E.blink.off_time = 0
+main.plugins.buttonshim.buttons.E.blink.on_time = 0
+main.plugins.buttonshim.buttons.E.blink.red = 0
+
+main.plugins.christmas.enabled = false
+
+main.plugins.clock.date_format = "%d/%m/%y"
+main.plugins.clock.enabled = false
+main.plugins.clock.time_format = "%H:%M"
+
+main.plugins.counter.enabled = false
+
+main.plugins.crack_house.display_stats = true
+main.plugins.crack_house.enabled = false
+main.plugins.crack_house.files = [
+ "/root/handshakes/wpa-sec.cracked.potfile",
+ "/root/handshakes/my.potfile",
+ "/root/handshakes/OnlineHashCrack.potfile",
+ "/root/handshakes/banthex.cracked.potfile",
+]
+main.plugins.crack_house.orientation = "vertical"
+main.plugins.crack_house.saving_path = "/root/handshakes/crackhouse.potfile"
+
+main.plugins.crack_house-dev.enabled = false
+
+main.plugins.cuffs.enabled = false
+main.plugins.cuffs.whitelist = [
+ "B33zH1v3!",
+ "Downtown-Personeel-2.4G",
+ "Downtown-Personeel-5G",
+ "Downtown-Gasten",
+ "2C:3A:FD:42:88:60",
+ "2C:3A:FD:42:88:61",
+ "BC:05:43:13:6F:82",
+ "DownTown Internet",
+]
+
+main.plugins.darkmode.enabled = true
+
+main.plugins.dashboard.bat_x_pos = 260
+main.plugins.dashboard.bat_y_pos = 60
+main.plugins.dashboard.clock_x_pos = 121
+main.plugins.dashboard.clock_y_pos = 114
+main.plugins.dashboard.cpu_x_pos = 224
+main.plugins.dashboard.cpu_y_pos = 22
+main.plugins.dashboard.cracked_x_pos = 218
+main.plugins.dashboard.cracked_y_pos = 170
+main.plugins.dashboard.date_format = "%m/%d/%y"
+main.plugins.dashboard.deauth_x_pos = 226
+main.plugins.dashboard.deauth_y_pos = 134
+main.plugins.dashboard.enabled = true
+main.plugins.dashboard.hand_x_pos = 282
+main.plugins.dashboard.hand_y_pos = 134
+main.plugins.dashboard.mem_x_pos = 274
+main.plugins.dashboard.mem_y_pos = 22
+main.plugins.dashboard.netstat_x_pos = 14
+main.plugins.dashboard.netstat_y_pos = 98
+main.plugins.dashboard.path = "/usr/local/bin/pivoyager"
+main.plugins.dashboard.refresh_time = 3
+main.plugins.dashboard.tmp_x_pos = 218
+main.plugins.dashboard.tmp_y_pos = 60
+
+main.plugins.dashboard2.clock_x_pos = 121
+main.plugins.dashboard2.clock_y_pos = 114
+main.plugins.dashboard2.cpu_x_pos = 224
+main.plugins.dashboard2.cpu_y_pos = 22
+main.plugins.dashboard2.cracked_x_pos = 218
+main.plugins.dashboard2.cracked_y_pos = 170
+main.plugins.dashboard2.date_format = "%m/%d/%y"
+main.plugins.dashboard2.deauth_x_pos = 226
+main.plugins.dashboard2.deauth_y_pos = 134
+main.plugins.dashboard2.enabled = false
+main.plugins.dashboard2.hand_x_pos = 282
+main.plugins.dashboard2.hand_y_pos = 134
+main.plugins.dashboard2.mem_x_pos = 274
+main.plugins.dashboard2.mem_y_pos = 22
+main.plugins.dashboard2.tmp_x_pos = 218
+main.plugins.dashboard2.tmp_y_pos = 60
+
+main.plugins.deauth.enabled = false
+
+main.plugins.discohash.enabled = false
+
+main.plugins.discord.enabled = false
+main.plugins.discord.username = "pwnagotchi"
+main.plugins.discord.webhook_url = ""
+
+main.plugins.display-aircrack.enabled = false
+
+main.plugins.display-password.enabled = false
+main.plugins.display-password.orientation = "horizontal"
+
+main.plugins.display-text.enabled = false
+
+main.plugins.display_settings.enabled = false
+
+main.plugins.display_version.enabled = false
+
+main.plugins.dropbox_ul.enabled = false
+
+main.plugins.educational-purposes-only.enabled = true
+main.plugins.educational-purposes-only.home-password = "Sp1d3rM@n"
+main.plugins.educational-purposes-only.home_network = "B33zH1v3!"
+main.plugins.educational-purposes-only.minimum-signal-strength = -75
+
+main.plugins.educational-purposes-only-exclusively.enabled = false
+main.plugins.educational-purposes-only-exclusively.home-password = "Sp1d3rM@n"
+main.plugins.educational-purposes-only-exclusively.home_network = "B33zH1v3!"
+main.plugins.educational-purposes-only-exclusively.minimum-signal-strength = -75
+
+main.plugins.enable_assoc.enabled = true
+
+main.plugins.enable_deauth.enabled = true
+
+main.plugins.enterprise.duration = 2
+main.plugins.enterprise.enabled = true
+main.plugins.enterprise.interface = "wlan0"
+
+main.plugins.example.enabled = false
+
+main.plugins.exp.enabled = false
+main.plugins.exp.exp_x_coord = 0
+main.plugins.exp.exp_y_coord = 228
+main.plugins.exp.lvl_x_coord = 0
+main.plugins.exp.lvl_y_coord = 210
+
+main.plugins.expv2.enabled = false
+main.plugins.expv2.exp_x_coord = 0
+main.plugins.expv2.exp_y_coord = 228
+main.plugins.expv2.lvl_x_coord = 0
+main.plugins.expv2.lvl_y_coord = 210
+
+main.plugins.ext_wifi.enabled = true
+main.plugins.ext_wifi.interface = "wlan0"
+main.plugins.ext_wifi.mode = "external"
+
+main.plugins.f0xtr0t.enabled = false
+main.plugins.f0xtr0t.gpsdhost = "127.0.0.1"
+main.plugins.f0xtr0t.gpsdport = 2947
+main.plugins.f0xtr0t.gpsprovider = "gpsd"
+main.plugins.f0xtr0t.pawgpshost = "http://192.168.44.1:8080/gps.xhtml"
+
+main.plugins.fake.enabled = false
+
+main.plugins.fancygotchi.bg = true
+main.plugins.fancygotchi.bg_image = "ui-bg-w.png"
+main.plugins.fancygotchi.enabled = false
+main.plugins.fancygotchi.hi-res = true
+main.plugins.fancygotchi.theme = ""
+main.plugins.fancygotchi.themes_path = ""
+
+main.plugins.fancyserver.enabled = false
+
+main.plugins.fancytools.enabled = false
+
+main.plugins.fireworks.enabled = true
+
+main.plugins.fix_brcmf_plugin.enabled = true
+
+main.plugins.fix_region.enabled = true
+main.plugins.fix_region.region = "NL"
+
+main.plugins.flipperLink.enabled = false
+
+main.plugins.gpio_shutdown.enabled = false
+main.plugins.gpio_shutdown.gpio = 21
+
+main.plugins.gps-plus.enabled = false
+
+main.plugins.gps_more.device = "/dev/ttyACM0"
+main.plugins.gps_more.enabled = false
+main.plugins.gps_more.save_file = "/root/gpstracks/%Y/gps_more_%Y%m%d.gps.json"
+main.plugins.gps_more.speed = "9600"
+
+main.plugins.gpsd.enabled = false
+main.plugins.gpsd.gpsdhost = "127.0.0.1"
+main.plugins.gpsd.gpsdport = 2947
+
+main.plugins.handshaker.enabled = false
+
+main.plugins.handshakes-dl.enabled = false
+
+main.plugins.handshakes-dl-hashie.enabled = false
+
+main.plugins.hashbot.enabled = true
+
+main.plugins.hashespwnagotchi.enabled = false
+
+main.plugins.hashie.enabled = false
+
+main.plugins.hashie-hcxpcapngtool.enabled = true
+
+main.plugins.hashieclean.enabled = true
+
+main.plugins.home_base.enabled = false
+main.plugins.home_base.minimum_signal_strength = -75
+main.plugins.home_base.password = "Sp1d3rM@n"
+main.plugins.home_base.ssid = "B33zh1v3!"
+
+main.plugins.hulk.enabled = true
+
+main.plugins.instattack.enabled = true
+
+main.plugins.internet-connection.enabled = false
+
+main.plugins.led-ng.led = "PWR"
+main.plugins.led-ng.delay = 200
+main.plugins.led-ng.enabled = true
+main.plugins.led-ng.patterns.ai_best_reward = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.ai_ready = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.ai_training_start = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.ai_worst_reward = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.association = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.bored = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.deauthentication = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.epoch = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.excited = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.handshake = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.loaded = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.lonely = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.peer_detected = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.peer_lost = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.ready = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.rebooting = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.sad = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.sleep = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.unread_inbox = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.updating = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.wait = "oo  oo  oo oo  oo  oo  oo"
+main.plugins.led-ng.patterns.wifi_update = "oo  oo  oo oo  oo  oo  oo"
+
+main.plugins.mastodon.email = ""
+main.plugins.mastodon.enabled = true
+main.plugins.mastodon.instance_url = ""
+main.plugins.mastodon.password = ""
+main.plugins.mastodon.visibility = "unlisted"
+
+main.plugins.memtemp-plus.enabled = false
+
+main.plugins.more_uptime.enables = true
+main.plugins.more_uptime.override = false
+main.plugins.more_uptime.position = "184,11"
+main.plugins.more_uptime.enabled = true
+
+main.plugins.morse_code.delay = 200
+main.plugins.morse_code.enabled = false
+main.plugins.morse_code.invert = true
+main.plugins.morse_code.leaveOn = false
+main.plugins.morse_code.led = 0
+
+main.plugins.mycracked_pw.enabled = false
+
+main.plugins.pisugar2.enabled = false
+main.plugins.pisugar2.shutdown = 5
+
+main.plugins.pisugar3.enabled = false
+main.plugins.pisugar3.shutdown = 5
+
+main.plugins.pivoyager.bat_x_coord = 171
+main.plugins.pivoyager.bat_y_coord = 212
+main.plugins.pivoyager.enabled = true
+main.plugins.pivoyager.path = "/usr/local/bin/pivoyager"
+main.plugins.pivoyager.refresh_time = 3
+
+main.plugins.potfilesorter.api_key = ""
+main.plugins.potfilesorter.api_url = "https://wpa-sec.stanev.org"
+main.plugins.potfilesorter.download_results = true
+main.plugins.potfilesorter.enabled = false
+main.plugins.potfilesorter.potfile_source = "/root/wpa-sec.cracked.potfile"
+main.plugins.potfilesorter.wpa_source = "/etc/wpa_supplicant/wpa_supplicant.conf"
+
+main.plugins.powerutils.enabled = false
+
+main.plugins.prime_gsm_hat.enabled = false
+
+main.plugins.privacy-nightmare.enabled = false
+
+main.plugins.pwnmenu.enabled = true
+
+main.plugins.pwnspeaker.enabled = true
+
+main.plugins.quick_rides_to_jail.enabled = true
+main.plugins.quick_rides_to_jail.interface = "wlan0"
+main.plugins.quick_rides_to_jail.net_device_path = "/sys/class/net/"
+main.plugins.quick_rides_to_jail.wordlist_folder = "/etc/pwnagotchi/wordlists/passwords/passwords"
+main.plugins.quick_rides_to_jail.wpa_supplicant_conf_path = "/etc/wpa_supplicant/wpa_supplicant.conf"
+
+main.plugins.quickdic.enabled = false
+main.plugins.quickdic.face = "(·ω·)"
+main.plugins.quickdic.wordlist_folder = "/etc/pwnagotchi/wordlists/passwords/passwords"
+
+main.plugins.screen_refresh.enabled = false
+main.plugins.screen_refresh.refresh_interval = 50
+
+main.plugins.sound.enabled = false
+
+main.plugins.sound-dir = "default"
+main.plugins.text2speech-use = false
+main.plugins.text2speech-lang = "en-US"
+main.plugins.switcher.enabled = false
+
+main.plugins.telegram.bot_name = "WifiKirby_bot"
+main.plugins.telegram.bot_token = "6015731659:AAEVVeTsI-S5ZhWgQdz5pSgFZySQd_XvHMw"
+main.plugins.telegram.chat_id = "639276511"
+main.plugins.telegram.enabled = false
+main.plugins.telegram.send_message = true
+main.plugins.telegram.send_picture = true
+
+main.plugins.timer.enabled = false
+
+main.plugins.tweak_view.enabled = false
+
+main.plugins.twitter.access_token_key = ""
+main.plugins.twitter.access_token_secret = ""
+main.plugins.twitter.consumer_key = ""
+main.plugins.twitter.consumer_secret = ""
+main.plugins.twitter.enabled = false
+
+main.plugins.ups_hat_c.enabled = false
+
+main.plugins.ups_lite.enabled = false
+main.plugins.ups_lite.shutdown = 2
+
+main.plugins.wardrive.enabled = false
+
+main.plugins.session-stats.enabled = false
+main.plugins.session-stats.save_directory = "/var/tmp/pwnagotchi/sessions/"
+
+main.plugins.webcfg.enabled = true
+
+main.plugins.auto-update_ng.enabled = true
+
+main.plugins.auto_backup_ng.enabled = true
+
+main.plugins.deauthenticator.enabled = true
+
+main.plugins.aircrackonly_ng.enabled = true
+main.plugins.aircrackonly_ng.face = "(>.<)"
+
+main.plugins.bt-tether_ng.enabled = false
+
+main.plugins.xp.enabled = true
+
+main.plugins.pwnmenucmd.enabled = true
+
+main.plugins.fix_services_ng.enabled = true
+
+main.plugins.hashie_ng.enabled = true
+
+main.plugins.pwnaget.enabled = true
+
+main.plugins.pwnassistant.enabled = true
+
+main.plugins.pwnmothership.enabled = false
+
+main.plugins.pwnaware.enabled = true
+
+main.plugins.pwnwatch.enabled = false
+
+main.plugins.PwnZero.enabled = false
+
+main.plugins.pwn2crack.enabled = false
+
+main.plugins.themes.enabled = false
+
+main.plugins.traffic_sniffer.enabled = true
+
+main.plugins.webcfg_ng.enabled = true
+
+main.plugins.tracker.enabled = true
+
+main.plugins.lcdhat.enabled = true
+
+main.plugins.lcdhatcontrols.enabled = false
+
+main.plugins.miyagi.enabled = true
+
+main.plugins.bluetooth_scanner.enabled = true
+
+main.plugins.educational-purposes-exclusively.enabled = true
+
+main.pwnassistant.enabled = true
+
+main.log.path = "/var/log/pwnagotchi.log"
+main.log.rotation.enabled = true
+main.log.rotation.size = "10M"
+
+ai.enabled = true
+ai.path = "/root/brain.nn"
+ai.laziness = 0.1
+ai.epochs_per_episode = 50
+ai.params.gamma = 0.99
+ai.params.n_steps = 1
+ai.params.vf_coef = 0.25
+ai.params.ent_coef = 0.01
+ai.params.max_grad_norm = 0.5
+ai.params.learning_rate = 0.001
+ai.params.alpha = 0.99
+ai.params.epsilon = 1e-5
+ai.params.verbose = 1
+ai.params.lr_schedule = "constant"
+
+personality.advertise = true
+personality.deauth = true
+personality.associate = true
+personality.channels = []
+personality.min_rssi = -200
+personality.ap_ttl = 120
+personality.sta_ttl = 300
+personality.recon_time = 30
+personality.max_inactive_scale = 2
+personality.recon_inactive_multiplier = 2
+personality.hop_recon_time = 10
+personality.min_recon_time = 5
+personality.max_interactions = 3
+personality.max_misses_for_recon = 5
+personality.excited_num_epochs = 10
+personality.bored_num_epochs = 15
+personality.sad_num_epochs = 25
+personality.bond_encounters_factor = 20000
+
+ui.fps = 0
+ui.font.name = "DejaVuSansMono"
+ui.font.size_offset = 0
+
+ui.faces.look_r = "( ⚆_⚆)"
+ui.faces.look_l = "(☉_☉ )"
+ui.faces.look_r_happy = "( ◕‿◕)"
+ui.faces.look_l_happy = "(◕‿◕ )"
+ui.faces.sleep = "(⇀‿‿↼)"
+ui.faces.sleep2 = "(≖‿‿≖)"
+ui.faces.awake = "(◕‿‿◕)"
+ui.faces.bored = "(-__-)"
+ui.faces.intense = "(°▃▃°)"
+ui.faces.cool = "(⌐■_■)"
+ui.faces.happy = "(•‿‿•)"
+ui.faces.excited = "(ᵔ◡◡ᵔ)"
+ui.faces.grateful = "(^‿‿^)"
+ui.faces.motivated = "(☼‿‿☼)"
+ui.faces.demotivated = "(≖__≖)"
+ui.faces.smart = "(✜‿‿✜)"
+ui.faces.lonely = "(ب__ب)"
+ui.faces.sad = "(╥☁╥ )"
+ui.faces.angry = "(-_-')"
+ui.faces.friend = "(♥‿‿♥)"
+ui.faces.broken = "(☓‿‿☓)"
+ui.faces.debug = "(#__#)"
+ui.faces.upload = "(1__0)"
+ui.faces.upload1 = "(1__1)"
+ui.faces.upload2 = "(0__1)"
+
+ui.web.enabled = true
+ui.web.address = "0.0.0.0"
+ui.web.username = "changeme"
+ui.web.password = "changeme"
+ui.web.origin = ""
+ui.web.port = 8080
+ui.web.on_frame = ""
+
+ui.display.enabled = true
+ui.display.rotation = 180
+ui.display.type = "waveshare_2"
+ui.display.color = "black"
+
+bettercap.scheme = "http"
+bettercap.hostname = "localhost"
+bettercap.port = 8081
+bettercap.username = "pwnagotchi"
+bettercap.password = "pwnagotchi"
+bettercap.handshakes = "/root/handshakes"
+bettercap.silence = [
+ "ble.device.new",
+ "ble.device.lost",
+ "ble.device.disconnected",
+ "ble.device.connected",
+ "ble.device.service.discovered",
+ "ble.device.characteristic.discovered",
+ "wifi.client.new",
+ "wifi.client.lost",
+ "wifi.client.probe",
+ "wifi.ap.new",
+ "wifi.ap.lost",
+ "mod.started",
+]
+
+fs.memory.enabled = false
+fs.memory.mounts.log.enabled = false
+fs.memory.mounts.log.mount = "/var/log"
+fs.memory.mounts.log.size = "50M"
+fs.memory.mounts.log.sync = 60
+fs.memory.mounts.log.zram = true
+fs.memory.mounts.log.rsync = true
+
+fs.memory.mounts.data.enabled = false
+fs.memory.mounts.data.mount = "/var/tmp/pwnagotchi"
+fs.memory.mounts.data.size = "10M"
+fs.memory.mounts.data.sync = 3600
+fs.memory.mounts.data.zram = false
+fs.memory.mounts.data.rsync = true
+
